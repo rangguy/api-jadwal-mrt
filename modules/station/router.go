@@ -1,6 +1,9 @@
 package station
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"net/http"
+)
 
 func Initiate(router *gin.RouterGroup) {
 	stationService := NewService()
@@ -19,5 +22,5 @@ func GetAllStation(c *gin.Context, service Service) {
 	}
 
 	// return response
-
+	c.JSON(http.StatusOK, datas)
 }

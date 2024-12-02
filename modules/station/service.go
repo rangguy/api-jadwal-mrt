@@ -22,6 +22,11 @@ func NewService() Service {
 }
 
 func (s *service) GetAllStations() (response []StationResponse, err error) {
-	// layer service
+	url := "https://jakartamrt.co.id/id/val/stasiuns"
+
+	// hit url
+
+	// return response
+
 	return
 }
