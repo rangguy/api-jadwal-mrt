@@ -11,7 +11,7 @@ import (
 
 type Service interface {
 	GetAllStations() (response []StationResponse, err error)
-	CheckScheduleByStation(id string) (response ScheduleResponse, err error)
+	CheckScheduleByStation(id string) (response []ScheduleResponse, err error)
 }
 
 type service struct {
@@ -49,7 +49,7 @@ func (s *service) GetAllStations() (response []StationResponse, err error) {
 	return response, err
 }
 
-func (s *service) CheckScheduleByStation(id string) (response ScheduleResponse, err error) {
+func (s *service) CheckScheduleByStation(id string) (response []ScheduleResponse, err error) {
 	url := "https://jakartamrt.co.id/id/val/schedule"
 
 	// hit url
