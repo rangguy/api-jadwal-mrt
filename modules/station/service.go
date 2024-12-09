@@ -50,7 +50,7 @@ func (s *service) GetAllStations() (response []StationResponse, err error) {
 }
 
 func (s *service) CheckScheduleByStation(id string) (response []ScheduleResponse, err error) {
-	url := "https://jakartamrt.co.id/id/val/schedule"
+	url := "https://jakartamrt.co.id/id/val/stasiuns"
 
 	// hit url
 	byteResponse, err := client.DoRequest(s.client, url)
